@@ -128,21 +128,21 @@ class DetailedProgressPlugin(octoprint.plugin.EventHandlerPlugin,
 	def get_update_information(self):
 		return dict(
 			detailedprogress=dict(
-				displayName="DetailedProgress Plugin",
+				displayName="DetailedProgress Plugin German",
 				displayVersion=self._plugin_version,
 
 				# version check: github repository
 				type="github_release",
-				user="dattas",
-				repo="OctoPrint-DetailedProgress",
+				user="DeDouby",
+				repo="OctoPrint-DetailedProgress-German",
 				current=self._plugin_version,
 
 				# update method: pip
-				pip="https://github.com/dattas/OctoPrint-DetailedProgress/archive/{target_version}.zip"
+				pip="https://github.com/DeDouby/OctoPrint-DetailedProgress-German/archive/{target_version}.zip"
 			)
 		)
 
-__plugin_name__ = "Detailed Progress Plugin"
+__plugin_name__ = "Detailed Progress Plugin German"
 
 def __plugin_load__():
 	global __plugin_implementation__
