@@ -4,30 +4,30 @@
 ### Do not forget to adjust the following variables to your own plugin.
 
 # The plugin's identifier, has to be unique
-plugin_identifier = "detailedprogress"
+plugin_identifier = "detailedprogressgerman"
 
 # The plugin's python package, should be "octoprint_<plugin identifier>", has to be unique
-plugin_package = "octoprint_detailedprogress"
+plugin_package = "octoprint_detailedprogress_german"
 
 # The plugin's human readable name. Can be overwritten within OctoPrint's internal data via __plugin_name__ in the
 # plugin module
-plugin_name = "OctoPrint-DetailedProgress"
+plugin_name = "OctoPrint-DetailedProgress-German"
 
 # The plugin's version. Can be overwritten within OctoPrint's internal data via __plugin_version__ in the plugin module
-plugin_version = "0.1.4"
+plugin_version = "0.1.4g"
 
 # The plugin's description. Can be overwritten within OctoPrint's internal data via __plugin_description__ in the plugin
 # module
-plugin_description = """Displays detailed progress on the LCD screen"""
+plugin_description = """Infos im LCD Display"""
 
 # The plugin's author. Can be overwritten within OctoPrint's internal data via __plugin_author__ in the plugin module
-plugin_author = "Dattas Moonchaser"
+plugin_author = "Dattas Moonchaser mod by DeDouby"
 
 # The plugin's author's mail address.
 plugin_author_email = "dattasmoon@gmail.com"
 
 # The plugin's homepage URL. Can be overwritten within OctoPrint's internal data via __plugin_url__ in the plugin module
-plugin_url = "https://github.com/dattas/OctoPrint-DetailedProgress"
+plugin_url = "https://github.com/DeDouby/OctoPrint-DetailedProgress-German"
 
 # The plugin's license. Can be overwritten within OctoPrint's internal data via __plugin_license__ in the plugin module
 plugin_license = "AGPLv3"
