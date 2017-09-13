@@ -9,7 +9,7 @@ A plugin that sends M117 commands to the printer to display the progress of the 
 
 Manuelle installieren mit dem PluginManager. URL ist:
 
-    https://github.com/DeDouby/OctoPrint-DetailedProgress/archive/master.zip
+    https://github.com/DeDouby/OctoPrint-DetailedProgress-German/archive/master.zip
  
 
 ## Configuration
