@@ -11,7 +11,7 @@ from octoprint.events import Events
 class DetailedProgressPlugin(octoprint.plugin.EventHandlerPlugin,
                              octoprint.plugin.SettingsPlugin,
 			     		octoprint.plugin.TemplatePlugin,
-					octoprint.plugin.AssetPlugin),
+					octoprint.plugin.AssetPlugin,
                                         octoprint.plugin.StartupPlugin):
 	_last_updated = 0.0
 	_last_message = 0
