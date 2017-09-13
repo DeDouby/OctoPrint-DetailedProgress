@@ -1,4 +1,4 @@
-# OctoPrint-DetailedProgress
+# OctoPrint-DetailedProgress German
 
 A plugin that sends M117 commands to the printer to display the progress of the print job being currently streamed. The message to display can be configured (some placeholders included).
 ![Example ETA](https://i.imgur.com/ocBp152.jpg)
@@ -7,10 +7,10 @@ A plugin that sends M117 commands to the printer to display the progress of the 
 
 ## Setup
 
-Install via the bundled [Plugin Manager](https://github.com/foosel/OctoPrint/wiki/Plugin:-Plugin-Manager)
-or manually using this URL:
+Manuelle installieren mit dem PluginManager. URL ist:
 
-    https://github.com/dattas/OctoPrint-DetailedProgress/archive/master.zip
+    https://github.com/DeDouby/OctoPrint-DetailedProgress-German/archive/master.zip
+ 
 
 ## Configuration
 
