@@ -11,7 +11,8 @@ from octoprint.events import Events
 class DetailedProgressPlugin(octoprint.plugin.EventHandlerPlugin,
                              octoprint.plugin.SettingsPlugin,
 			     		octoprint.plugin.TemplatePlugin,
-					octoprint.plugin.AssetPlugin):
+					octoprint.plugin.AssetPlugin),
+                                        octoprint.plugin.StartupPlugin):
 	_last_updated = 0.0
 	_last_message = 0
 	_repeat_timer = None
@@ -20,7 +21,7 @@ class DetailedProgressPlugin(octoprint.plugin.EventHandlerPlugin,
 	_messages = []
 	def on_event(self, event, payload):
 		if event == Events.PRINT_STARTED:
-			self._logger.info("Printing started. Detailed progress started.")
+			self._logger.info("Druck Gestartet. Detailed progress started.")
 			self._etl_format = self._settings.get(["etl_format"])
 			self._eta_strftime = self._settings.get(["eta_strftime"])
 			self._messages = self._settings.get(["messages"])
@@ -30,8 +31,8 @@ class DetailedProgressPlugin(octoprint.plugin.EventHandlerPlugin,
 			if self._repeat_timer != None:
 				self._repeat_timer.cancel()
 				self._repeat_timer = None
-			self._logger.info("Printing stopped. Detailed progress stopped.")
-			self._printer.commands("M117 Print Done")
+			self._logger.info("Druck gestoppt. Detailed progress stopped.")
+			self._printer.commands("M117 Druck fertig")
 		elif event == Events.CONNECTED:
 			ip = self._get_host_ip()
 			if not ip:
@@ -100,8 +101,8 @@ class DetailedProgressPlugin(octoprint.plugin.EventHandlerPlugin,
 	##-- AssetPlugin 
  	
  	def get_assets(self):
- 			return dict(
- 				js=["js/DetailedProgress.js"]
+ 			return dict(js=["js/DetailedProgress.js"],
+				    css=["css/detailedprogress.css"]
  			)	
 	
 	##~~ Settings
@@ -117,6 +118,18 @@ class DetailedProgressPlugin(octoprint.plugin.EventHandlerPlugin,
 			etl_format = "{hours:02d}h{minutes:02d}m{seconds:02d}s",
 			time_to_change = 10
 		)
+		
+		return dict(time_to_change="10",
+			    eta_strftime="%H:%M:%S Tag %d",
+			    etl_format="{hours:02d}:{minutes:02d}:{seconds:02d}",
+			    allmessages=['{completion:.2f}% gedruckt',
+					 'noch {printTimeLeft}',
+					 'Ende {ETA}'],
+			    messages=['{completion:.2f}% gedruckt',
+				      'noch {printTimeLeft}',
+				      'Ende {ETA}'],
+			    msgToAdd="")
+		
 		
  	##-- Template hooks
  	
