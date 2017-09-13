@@ -10,9 +10,15 @@ from octoprint.events import Events
 
 class DetailedProgressPlugin(octoprint.plugin.EventHandlerPlugin,
                              octoprint.plugin.SettingsPlugin,
+<<<<<<< HEAD
 			     		     octoprint.plugin.TemplatePlugin,
 					         octoprint.plugin.AssetPlugin,
                              octoprint.plugin.StartupPlugin):
+=======
+			     		octoprint.plugin.TemplatePlugin,
+					octoprint.plugin.AssetPlugin,
+                                        octoprint.plugin.StartupPlugin):
+>>>>>>> 1b17b100963671cfe4b3051190ce397451238ea5
 	_last_updated = 0.0
 	_last_message = 0
 	_repeat_timer = None
