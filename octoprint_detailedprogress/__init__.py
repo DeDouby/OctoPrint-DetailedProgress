@@ -8,7 +8,7 @@ import octoprint.util
 import traceback
 from octoprint.events import Events
 
-class DetailedProgressPlugin(octoprint.plugin.EventHandlerPlugin,
+class detailedprogress(octoprint.plugin.EventHandlerPlugin,
                              octoprint.plugin.SettingsPlugin,
 <<<<<<< HEAD
 			     		     octoprint.plugin.TemplatePlugin,
